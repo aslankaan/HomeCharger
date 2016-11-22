@@ -1,0 +1,123 @@
+page-home {
+    
+ .home {
+ 
+    scroll-content {
+        display: flex;
+        flex-direction: column;
+    }
+ 
+    ion-grid {
+        padding: 0;
+        height: 100%;
+    }
+ 
+    ion-row {
+        flex: 1;
+    }
+
+    #grad {
+        background: #3d3d3d; /* For browsers that do not support gradients */
+        /* For Safari 5.1 to 6.0 */
+        background: -webkit-linear-gradient(left,#272424, #3d3d3d, #272424);
+        /* For Opera 11.1 to 12.0 */
+        background: -o-linear-gradient(left,#272424, #3d3d3d, #272424);
+        /* For Fx 3.6 to 15 */
+        background: -moz-linear-gradient(left,#272424, #3d3d3d, #272424);
+        /* Standard syntax */
+        background: linear-gradient(to right,#272424, #3d3d3d, #272424); 
+    }
+
+    .graph__wrapper {
+    width: 400px;
+    margin: 30px auto;
+    position: relative;
+    }
+    .graph__wrapper svg {
+    position: absolute;
+    margin: 36px 0px 0px 15px;
+    }
+    .coordinates {
+    position: absolute;
+    counter-reset: line 6;
+    }
+    .coordinates span {
+    display: inline-block;
+    border-bottom: 1px solid #aaaaaa;
+    height: 20px;
+    width: 400px;
+    }
+    .coordinates span:before {
+    counter-increment: line -1;
+    content: counter(line);
+    display: inline-block;
+    color: #aaaaaa;
+    margin: 10px 0px 0px -15px;
+    }
+    .path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    -webkit-animation: dash 3s ease-in forwards;
+            animation: dash 3s ease-in forwards;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    }
+    @-webkit-keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+    }
+    @keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+    }
+    .description {
+    font-family: "Roboto";
+    color: #626262;
+    text-align: center;
+    margin: 40px 0px;
+    }
+
+
+
+ 
+ }
+     .dark-title{
+        text-align: center;
+        color: #626262;
+        vertical-align: middle; 
+        
+    }
+
+    .light-title{
+        text-align: center;
+        color: #ffffff;
+        vertical-align: middle;        
+    }
+
+    .align-r{
+        text-align: right;
+        color: #626262;
+    }
+
+
+ 
+
+    th{
+       color: #ff7d00; 
+       padding: 4px;
+       text-align: right;      
+    }
+    td{
+       color: #ffffff;
+       padding: 4px;
+       
+    }
+
+
+
+
+}

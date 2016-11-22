@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar color="charge-header">
+    <ion-grid>
+      <ion-row wrap center>
+        <ion-col width-10>
+          <button ion-button full clear><h1 class="light-title"><ion-icon name="speedometer"></ion-icon></h1></button>
+        </ion-col>
+        <ion-col width-80>
+          <h1 class="light-title"><ion-icon name="car"></ion-icon> Home Charger</h1>
+        </ion-col>
+        <ion-col width-10>
+          <button ion-button full clear menuToggle><h1 class="light-title"><ion-icon name="menu"></ion-icon></h1></button>
+        </ion-col>
+
+        
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+ 
+</ion-header>
+
+
+
+
+<ion-content class = "home has-header">
+  
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row wrap>
+        <ion-col width-25>
+          <button class="dark-title" ion-button full clear>State</button>
+        </ion-col>
+        <ion-col width-25>
+          <button class="dark-title" ion-button full clear>History</button>
+        </ion-col>
+        <ion-col width-25>
+          <button class="dark-title" ion-button full clear>Options</button>
+        </ion-col>
+        <ion-col width-25>
+          <button class="dark-title" ion-button full clear>Manual</button>
+        </ion-col>
+        
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+
+  <ion-grid id="grad">
+    <ion-row responsive-sm>
+      
+      <ion-col width-67>
+
+      </ion-col>
+    
+
+    
+      <ion-col width-33>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+<ion-menu [content]="content" side="right">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Pages</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="openPage(loginPage)">
+        Login
+      </button>
+      <button ion-item (click)="openPage(signupPage)">
+        Signup
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+
+
+
+
