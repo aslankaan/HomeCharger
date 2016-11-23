@@ -1,30 +1,11 @@
 <ion-header>
-  <ion-toolbar color="charge-header">
-    <ion-grid>
-      <ion-row wrap center>
-        <ion-col width-10>
-          <button ion-button full clear><h1 class="light-title"><ion-icon name="speedometer"></ion-icon></h1></button>
-        </ion-col>
-        <ion-col width-80>
-          <h1 class="light-title"><ion-icon name="car"></ion-icon> Home Charger</h1>
-        </ion-col>
-        <ion-col width-10>
-          <button ion-button full clear menuToggle><ion-icon name="menu"></ion-icon></button>
-        </ion-col>
+  <ion-navbar color="charge-header">
+          <ion-title center><ion-icon center name="car"> Home Charger</ion-icon></ion-title>
+          <button ion-button right clear menuToggle><ion-icon name="menu"></ion-icon></button>
+  </ion-navbar>
 
-        
-      </ion-row>
-    </ion-grid>
-  </ion-toolbar>
- 
-</ion-header>
-
-
-
-
-<ion-content class = "home">
-  <br><br><br><br><br><br>
-  <ion-toolbar>
+  <!--
+   <ion-toolbar>
     <ion-grid>
       <ion-row wrap>
         <ion-col width-25>
@@ -43,130 +24,58 @@
       </ion-row>
     </ion-grid>
   </ion-toolbar>
+-->
 
-<ion-grid id="grad">
-  <ion-row responsive-sm>
-    
-    <ion-col width-67>
-    
-      <div class="graph__wrapper">
-        <div class="coordinates">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span> 
-        </div>
-          <svg width="315px" height="107px" viewBox="0 0 315 107" version="1.1">
-            <defs>
-                <linearGradient x1="0%" y1="100%" x2="100%" y2="100%" id="linearGradient-1">
-                    <stop stop-color="#ff7d00" offset="0%"></stop>
-                    <stop stop-color="#ff7d00" offset="41.7610013%"></stop>
-                    <stop stop-color="#ff7d00" offset="78.6870217%"></stop>
-                    <stop stop-color="#ff7d00" offset="100%"></stop>
-                </linearGradient>
-            </defs>
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-                <path d="M2.10546875,95.75 L40.5546875,68.3476562 L55.2109375,81.1796875 L65.2148437,76.3945312 L96.1835937,86.8320312 L131.023438,19.9414062 L142.15625,23.7226562 L183.605469,2.1953125 L211.007812,22.3320312 L234.320312,71.5664062 L234.667969,83.0039062 L244.019531,83.0039062 L247.105469,88.8320312 L312.695312,104.839844" id="Path-1" stroke="url(#linearGradient-1)" stroke-width="4" sketch:type="MSShapeGroup" class="path"></path>
-            </g>
-          </svg>
-        </div>
-    </ion-col>
-   
+</ion-header>
 
-   
-    <ion-col width-33>
-      <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-        <table>
-          <tr> 
-            <th>04/09/2015</th>
-            <th></th>
-          </tr>
-          <tr>
-            <td class="align-r">stop</td>
-            <td>00:01</td>
-          </tr>
-          <tr>
-            <td class="align-r">duration</td>
-            <td>3h 4m</td>
-          </tr>
-          <tr>
-            <td class="align-r">total energy (kWh)</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td class="align-r">cost</td>
-            <td>0.6</td>
-          </tr>
-        </table>
-        <table>
-          <tr> 
-            <th>04/09/2015</th>
-            <th></th>
-          </tr>
-          <tr>
-            <td class="align-r">stop</td>
-            <td>00:01</td>
-          </tr>
-          <tr>
-            <td class="align-r">duration</td>
-            <td>3h 4m</td>
-          </tr>
-          <tr>
-            <td class="align-r">total energy (kWh)</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td class="align-r">cost</td>
-            <td>0.6</td>
-          </tr>
-        </table>
-        <table>
-          <tr> 
-            <th>04/09/2015</th>
-            <th></th>
-          </tr>
-          <tr>
-            <td class="align-r">stop</td>
-            <td>00:01</td>
-          </tr>
-          <tr>
-            <td class="align-r">duration</td>
-            <td>3h 4m</td>
-          </tr>
-          <tr>
-            <td class="align-r">total energy (kWh)</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td class="align-r">cost</td>
-            <td>0.6</td>
-          </tr>
-        </table>
-      </section>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+
+
+
+<ion-content class = "home" id="grad">
+  
+
+  <ion-grid>
+    <ion-row responsive-sm>
+      
+      <ion-col width-67>
+      
+        <div class="graph__wrapper">
+          <div class="coordinates">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span> 
+          </div>
+            <svg width="315px" height="107px" viewBox="0 0 315 107" version="1.1">
+              <defs>
+                  <linearGradient x1="0%" y1="100%" x2="100%" y2="100%" id="linearGradient-1">
+                      <stop stop-color="#ff7d00" offset="0%"></stop>
+                      <stop stop-color="#ff7d00" offset="41.7610013%"></stop>
+                      <stop stop-color="#ff7d00" offset="78.6870217%"></stop>
+                      <stop stop-color="#ff7d00" offset="100%"></stop>
+                  </linearGradient>
+              </defs>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                  <path d="M2.10546875,95.75 L40.5546875,68.3476562 L55.2109375,81.1796875 L65.2148437,76.3945312 L96.1835937,86.8320312 L131.023438,19.9414062 L142.15625,23.7226562 L183.605469,2.1953125 L211.007812,22.3320312 L234.320312,71.5664062 L234.667969,83.0039062 L244.019531,83.0039062 L247.105469,88.8320312 L312.695312,104.839844" id="Path-1" stroke="url(#linearGradient-1)" stroke-width="4" sketch:type="MSShapeGroup" class="path"></path>
+              </g>
+            </svg>
+          </div>
+      </ion-col>
+    
+
+    
+      <ion-col width-33>
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </section>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
 
 </ion-content>
 
-<ion-menu [content]="content" side="right">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Pages</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-list>
-      <button ion-item (click)="openPage(loginPage)">
-        Login
-      </button>
-      <button ion-item (click)="openPage(signupPage)">
-        Signup
-      </button>
-    </ion-list>
-  </ion-content>
-</ion-menu>
-
-<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

@@ -1,7 +1,4 @@
-
-
-import { SideMenuPage } from './../pages/side-menu/side-menu';
-import {MainNavPage} from '../pages/main-nav/main-nav';
+import { TabsPage } from './../pages/tabs/tabs';
 import {NgModule} from '@angular/core';
 import {IonicModule, IonicApp} from 'ionic-angular';
 import {MyApp} from './app.component';
@@ -12,18 +9,19 @@ import {HomePage} from '../pages/home/home';
   declarations: [
     MyApp,
     HomePage,
-    MainNavPage,
-    SideMenuPage,
+    TabsPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      tabsPlacement: 'top',
+      //mode: "md"
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    MainNavPage,
-    SideMenuPage
+    TabsPage
   ],
   providers: []
 })
