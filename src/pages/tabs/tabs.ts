@@ -1,3 +1,4 @@
+import { WiFiPage } from './../wi-fi/wi-fi';
 import { Component } from '@angular/core';
 
 import { HomePage } from '../home/home';
@@ -12,7 +13,7 @@ export class TabsPage {
   tab1Root: any = HomePage;
   tab2Root: any = HomePage;
   tab3Root: any = HomePage;
-  tab4Root: any = HomePage;
+  tab4Root: any = WiFiPage;
 
   constructor() {
 

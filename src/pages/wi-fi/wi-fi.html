@@ -1,0 +1,29 @@
+<!--
+  Generated template for the WiFi page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Wi-Fi</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button (click) = "startScan()">Start Scan</button>
+  <button ion-button (click) = "getScanResult()">Get Scan Result</button>
+
+  <ion-card>
+      <ion-list>
+        <button ion-item *ngFor = "let item of info">
+          <ion-icon name="ios-wifi" item-right></ion-icon>
+          {{item.SSID}}
+        </button>
+      </ion-list>
+  </ion-card>
+ 
+</ion-content>

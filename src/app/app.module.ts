@@ -1,15 +1,17 @@
+import { WiFiPage } from './../pages/wi-fi/wi-fi';
 import { TabsPage } from './../pages/tabs/tabs';
-import {NgModule} from '@angular/core';
-import {IonicModule, IonicApp} from 'ionic-angular';
-import {MyApp} from './app.component';
-import {HomePage} from '../pages/home/home';
+import { NgModule } from '@angular/core';
+import { IonicModule, IonicApp } from 'ionic-angular';
+import { MyApp } from './app.component';
+import { HomePage } from '../pages/home/home';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    TabsPage
+    TabsPage,
+    WiFiPage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
@@ -21,7 +23,8 @@ import {HomePage} from '../pages/home/home';
   entryComponents: [
     MyApp,
     HomePage,
-    TabsPage
+    TabsPage,
+    WiFiPage
   ],
   providers: []
 })
