@@ -14,15 +14,31 @@
 
 
 <ion-content padding>
-  <button ion-button (click) = "startScan()">Start Scan</button>
-  <button ion-button (click) = "getScanResult()">Get Scan Result</button>
+  
+   
+  <button ion-button block (click) = "getScanResult()">Scan Wi-Fi</button>
+  
 
-  <ion-card>
+    <ion-spinner class= "center" *ngIf="show_spinner"></ion-spinner>
+    <!--
+      <ion-card *ngIf="connected">
+          Connected!      
+      </ion-card>
+    -->
+
+
+  <ion-card *ngFor = "let item of info">
       <ion-list>
-        <button ion-item *ngFor = "let item of info">
-          <ion-icon name="ios-wifi" item-right></ion-icon>
-          {{item.SSID}}
-        </button>
+        <div>
+          <ion-item>
+            <ion-icon name="ios-wifi" item-right></ion-icon>
+            {{item.SSID}}
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Password" [(ngModel)] = "item.wifiPassword"></ion-input>
+            <button ion-button outline item-right (click) = "connectNetwork(item.SSID, item.wifiPassword)">Connect</button>
+          </ion-item>
+        </div>
       </ion-list>
   </ion-card>
  
